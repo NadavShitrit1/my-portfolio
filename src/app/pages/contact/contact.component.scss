@@ -1,0 +1,62 @@
+.contact {
+    background: linear-gradient(145deg, #0f172a, #1e293b);
+    color: #f1f1f1;
+    padding: 80px 20px;
+    text-align: center;
+  
+    .contact-container {
+      max-width: 700px;
+      margin: 0 auto;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+    }
+  
+    .section-title {
+      font-size: 2.8rem;
+      color: #3399cc;
+      margin-bottom: 20px;
+    }
+  
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #cbd5e1;
+    }
+  
+    .contact-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+  
+      @media (min-width: 600px) {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  
+    .contact-btn {
+      background-color: #3399cc;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #009acd;
+      }
+    }
+  
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+  

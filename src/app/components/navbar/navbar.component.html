@@ -1,0 +1,17 @@
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">Nadav<span>.</span></div>
+
+    <div class="menu-toggle" (click)="toggleMenu()">
+      ☰
+    </div>
+
+    <ul [class.open]="menuOpen" class="nav-links">
+      <li><a href="#home" (click)="closeMenu()">Home</a></li>
+      <li><a href="#about" (click)="closeMenu()">About</a></li>
+      <li><a href="#experience" (click)="closeMenu()">Experience</a></li>
+      <li><a href="#projects" (click)="closeMenu()">Projects</a></li>
+      <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+    </ul>
+  </div>
+</nav>
