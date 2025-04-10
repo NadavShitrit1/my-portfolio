@@ -58,12 +58,16 @@ export class ExperienceComponent {
       `
     },
     {
-      title: 'Sanida.io – Full Stack Developer',
+      title: 'Sanida.io – Product & Full Stack Developer',
       period: '2023',
       content: `
-        Collaborated with a software development partner to create an project using the .NET technology stack. <br>
-        Utilized Angular as the front-end framework and implemented a MongoDB database for data storage. <br>
-        Additionally, I gained experience with basic AWS cloud computing concepts and services, which allowed us to successfully deploy the application. 
+        Successfully led the transformation of the startup's product from
+        ideation to production, meticulously aligning development processes with
+        stakeholder requirements. <br>
+        Managed project budgets and optimized resource allocation, ensuring costeffective solutions while overseeing the successful deployment of the
+        application. <br>
+        Provided strong leadership to development teams, fostering a positive and
+        collaborative work environment conducive to productivity and innovation. 
       `
     },
     {

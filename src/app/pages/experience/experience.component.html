@@ -10,9 +10,21 @@
     >
       <div class="timeline-dot"></div>
       <div class="timeline-content">
-        <h3>{{ item.title }}</h3>
-        <span>{{ item.period }}</span>
-        <div class="timeline-body" *ngIf="openEducationIndex === i" [innerHTML]="item.content"></div>
+        <div class="timeline-content-header">
+          <div class="title-group">
+            <h3>{{ item.title }}</h3>
+            <span>{{ item.period }}</span>
+          </div>
+          <span class="toggle-icon">
+            {{ openEducationIndex === i ? '−' : '+' }}
+          </span>
+        </div>
+        
+        <div
+          class="timeline-body"
+          *ngIf="openEducationIndex === i"
+          [innerHTML]="item.content"
+        ></div>
       </div>
     </div>
   </div>
@@ -28,9 +40,42 @@
     >
       <div class="timeline-dot"></div>
       <div class="timeline-content">
-        <h3>{{ item.title }}</h3>
-        <span>{{ item.period }}</span>
-        <div class="timeline-body" *ngIf="openExperienceIndex === i" [innerHTML]="item.content"></div>
+        <div class="timeline-content-header">
+          <div>
+            <h3>{{ item.title }}</h3>
+            <span>{{ item.period }}</span>
+          </div>
+          <span class="toggle-icon">
+            {{ openExperienceIndex === i ? '−' : '+' }}
+          </span>
+        </div>
+        <div
+          class="timeline-body"
+          *ngIf="openExperienceIndex === i"
+          [innerHTML]="item.content"
+        ></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="certificates">
+    <h2 class="section-title">Certificates</h2>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <img src="assets/sela-certificate.jpg" alt="Sela Certificate" />
+        <p>Full Stack Development – Sela College</p>
+      </div>
+  
+      <div class="cert-card aws">
+        <img src="assets/aws-certificate.jpg" alt="AWS Certificate" />
+        <p>Cloud Computing – AWS Fundamentals</p>
+      </div>
+  
+      <div class="cert-card coming-soon">
+        <div class="blurred">
+          <span class="soon-text">Coming Soon...</span>
+        </div>
+        <p>More Certifications In Progress</p>
       </div>
     </div>
   </div>
