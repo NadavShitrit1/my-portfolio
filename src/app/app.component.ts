@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ExperienceComponent } from './pages/experience/experience.component';
+import { AiChatComponent } from './components/ai-chat/ai-chat.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { ExperienceComponent } from './pages/experience/experience.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    AiChatComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']

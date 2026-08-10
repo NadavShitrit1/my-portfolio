@@ -1,0 +1,52 @@
+<button class="chat-toggle-btn" (click)="toggleChat()">
+  <span *ngIf="!isOpen">💬 Ask my AI</span>
+  <span *ngIf="isOpen">✖ Close</span>
+</button>
+
+<div class="chat-window" *ngIf="isOpen">
+  <div class="chat-header">
+    <div class="header-info">
+      <span class="bot-avatar">🤖</span>
+      <div>
+        <strong>Nadav's AI Assistant</strong>
+        <span class="status-online">● Powered by Llama 3 & RAG</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-body" #chatBody>
+    <div *ngFor="let msg of messages" 
+         [ngClass]="['message', msg.sender]"
+         [attr.dir]="isHebrew(msg.text) ? 'rtl' : 'ltr'">
+      <div class="msg-bubble">{{ msg.text }}</div>
+    </div>
+    
+    <div *ngIf="isLoading" class="message ai">
+      <div class="msg-bubble loading">Thinking... 🧠</div>
+    </div>
+
+    <!-- צ'יפים של שאלות נפוצות -->
+    <div class="quick-questions" *ngIf="messages.length <= 2 && !isLoading">
+      <p class="quick-title">💡 Suggested Questions / שאלות מומלצות:</p>
+      <button 
+        *ngFor="let q of defaultQuestions" 
+        class="quick-btn" 
+        [attr.dir]="isHebrew(q) ? 'rtl' : 'ltr'"
+        (click)="selectQuestion(q)">
+        {{ q }}
+      </button>
+    </div>
+  </div>
+
+  <div class="chat-footer">
+    <input 
+      type="text" 
+      [(ngModel)]="userInput" 
+      (keyup.enter)="sendMessage()" 
+      placeholder="Ask a question / שאל שאלה..."
+      [attr.dir]="isHebrew(userInput) ? 'rtl' : 'ltr'"
+      [disabled]="isLoading"
+    />
+    <button (click)="sendMessage()" [disabled]="isLoading || !userInput.trim()">Send</button>
+  </div>
+</div>
