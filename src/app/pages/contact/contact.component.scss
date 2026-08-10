@@ -1,62 +1,71 @@
 .contact {
-    background: linear-gradient(145deg, #0f172a, #1e293b);
-    color: #f1f1f1;
-    padding: 80px 20px;
-    text-align: center;
-  
-    .contact-container {
-      max-width: 700px;
-      margin: 0 auto;
-      animation: fadeInUp 1s ease forwards;
-      opacity: 0;
-    }
-  
-    .section-title {
-      font-size: 2.8rem;
-      color: #3399cc;
-      margin-bottom: 20px;
-    }
-  
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      color: #cbd5e1;
-    }
-  
-    .contact-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-  
-      @media (min-width: 600px) {
-        flex-direction: row;
-        justify-content: center;
-      }
-    }
-  
-    .contact-btn {
-      background-color: #3399cc;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-  
-      &:hover {
-        background-color: #009acd;
-      }
-    }
-  
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+  background: linear-gradient(160deg, rgba(7, 10, 20, 0.96), rgba(15, 23, 42, 0.98));
+  padding: 20px;
+  text-align: center;
+
+  .contact-container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 42px 34px;
+    background: rgba(8, 14, 30, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 32px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(16px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .section-title {
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.18rem;
+    margin-bottom: 30px;
+    color: #cbd5e1;
+    max-width: 650px;
+  }
+
+  .contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+      justify-content: center;
     }
   }
+
+  .contact-btn {
+    background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+    color: #0f172a;
+    padding: 14px 22px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 16px 40px rgba(34, 211, 238, 0.18);
+  }
+
+  .contact-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
   

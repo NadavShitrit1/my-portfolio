@@ -25,8 +25,6 @@ export class AiChatComponent implements AfterViewChecked {
   defaultQuestions: string[] = [
     "What is the architecture of this AI Assistant?",
     "מה הניסיון של נדב ב-Full Stack ו-AI?",
-    "Tell me about Nadav's key projects",
-    "מה השכלתו ורקע השירות הצבאי של נדב?",
     "What is Nadav's tech stack?",
   ];
 
